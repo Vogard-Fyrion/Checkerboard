@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" 
+        type="text/css" 
+        href="{{ url_for('static', filename ='style.css') }}">
+</head>
+<body>
+    <h1>Checkerboard</h1>
+    <div class="body">
+        {% for vert in range(0, x): %}
+            <div class="block">
+            {% for hori in range(0, y): %}
+                {% if vert % 2 == 0 and hori % 2 == 0 and colorful1 == True 
+                    or vert % 2 == 1 and hori % 2 == 1 and colorful1 == True %}
+                <div class="color1 box" style="background-color: {{color1}};"></div>
+                {% elif vert % 2 == 0 and hori % 2 == 0 and colorful1 == False
+                    or vert % 2 == 1 and hori % 2 == 1 and colorful1 == False %}
+                <div class="color-b box"></div>
+                {% elif vert % 2 == 1 and hori % 2 == 0 and colorful2 == True 
+                    or vert % 2 == 0 and hori % 2 == 1 and colorful2 == True %}
+                <div class="color2 box" style="background-color: {{color2}};"></div>
+                {% else %}
+                <div class="color-r box"></div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

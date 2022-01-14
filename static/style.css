@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    background-color: black;
+    color: red;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    max-width: 400px;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+.block{
+    display: inline-block;
+}
+.color-b{
+    background-color: black;
+}
+.color-r{
+    background-color: red;
+}
+.box{
+    width: 100px;
+    height: 100px;
+}
